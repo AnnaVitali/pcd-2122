@@ -1,5 +1,8 @@
 package pcd.lab02.check_act;
 
+/**
+ * Oggetto he mi consente di effettuare i suoi metodi in modo atomico
+ */
 public class Counter {
 
 	private int cont;

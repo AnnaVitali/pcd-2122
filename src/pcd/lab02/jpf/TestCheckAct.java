@@ -39,7 +39,7 @@ public class TestCheckAct {
 
 	public static void main(String[] args) throws Exception {
 
-		Verify.beginAtomic();
+	 	Verify.beginAtomic();
 		Counter c = new Counter();
 		Thread th0 = new MyThread(c);
 		Thread th1 = new MyThread(c);

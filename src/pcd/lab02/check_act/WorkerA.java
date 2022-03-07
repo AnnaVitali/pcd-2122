@@ -9,7 +9,10 @@ public class WorkerA extends Thread{
 		counter = c;
 		this.ntimes = ntimes;
 	}
-	
+
+	/**
+	 * decrementa se è maggiore di zero
+	 */
 	public void run(){
 		try {
 			for (int i = 0; i < ntimes; i++){
