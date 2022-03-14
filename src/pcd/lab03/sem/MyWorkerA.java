@@ -15,7 +15,7 @@ public class MyWorkerA extends Worker {
 		while (true){
 		  action1();	
 		  try {
-			  mutex.acquire();
+			  mutex.acquire(); //se uno chiama interrupt si ferma
 			  action2();	
 			  action3();	
 		  } catch (InterruptedException ex) {

@@ -43,7 +43,7 @@ class MyEntityA implements IObserved {
 	}
 }
 
-class MyEntityB implements IObserver {
+class MyEntityB implements IObserver {//funge da ascoltatore
 
 	List<IObserved> obsList;
 
