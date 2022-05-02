@@ -117,13 +117,15 @@ public class ViewFrame extends JFrame implements ActionListener {
 		}
 	}
 
-	public class MandelbrotPanel extends JPanel {
+	public class MandelbrotPanel extends JPanel{
 
 		private BufferedImage image;
 		
 		public MandelbrotPanel(int w, int h){
 			this.image = new BufferedImage(w,h,BufferedImage.TYPE_INT_RGB);
 		}
+
+		private double scale = 1;
 
 		public void updateImage(int[] rgbData){
 			int w = image.getWidth();

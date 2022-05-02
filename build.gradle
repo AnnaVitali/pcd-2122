@@ -8,6 +8,14 @@ repositories {
 }
 
 
+sourceSets {
+    main {
+        java {
+            srcDir("src")
+        }
+    }
+}
+
 dependencies {
 
     /* module 2.2 - async programming with event-loops - vert.x */
