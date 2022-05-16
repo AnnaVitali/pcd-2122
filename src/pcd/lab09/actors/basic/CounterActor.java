@@ -7,7 +7,9 @@ import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
 
-
+/*
+Ricordare tutto diventa un attore, tutto diventa attivo reattivo e concorrente
+ */
 public class CounterActor extends AbstractBehavior<CounterMsg> {
 
 	private int count;
@@ -45,8 +47,8 @@ public class CounterActor extends AbstractBehavior<CounterMsg> {
 	static public class IncMsg implements CounterMsg {}
 	
 	static public class GetValueMsg implements CounterMsg {
-		public final ActorRef replyTo;
-		public GetValueMsg(ActorRef replyTo) {
+		public final ActorRef<CounterUserMsg> replyTo;
+		public GetValueMsg(ActorRef<CounterUserMsg> replyTo) {
 			this.replyTo = replyTo;
 		}
 	}

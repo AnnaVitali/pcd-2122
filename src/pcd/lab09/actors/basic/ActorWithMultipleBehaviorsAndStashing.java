@@ -7,7 +7,9 @@ import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
 import akka.actor.typed.javadsl.StashBuffer;
-
+/*
+In questo caso non vengono persi i messaggi, che non si è in grado di gestire vengono inseriti nello stash buffer
+ */
 public class ActorWithMultipleBehaviorsAndStashing extends AbstractBehavior<ActorWithMultipleBehaviorsBaseMsg> {
 
 	public static class MsgZero implements ActorWithMultipleBehaviorsBaseMsg {}

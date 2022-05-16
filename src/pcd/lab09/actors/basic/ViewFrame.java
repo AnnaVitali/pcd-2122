@@ -11,6 +11,9 @@ import javax.swing.SwingUtilities;
 
 import akka.actor.ActorRef;
 
+/*
+Nelle parti non ad attori possiamo ocmunicare con gli attori tramite l'invio di messaggi
+ */
 public class ViewFrame extends JFrame {
 
 	public ViewFrame(ActorRef actorView) {

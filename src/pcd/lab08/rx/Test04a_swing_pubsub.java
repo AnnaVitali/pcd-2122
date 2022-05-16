@@ -34,7 +34,7 @@ public class Test04a_swing_pubsub {
 
 	static public void main(String[] args){
 		
-		PublishSubject<Integer> clickStream = PublishSubject.create();
+		PublishSubject<Integer> clickStream = PublishSubject.create(); //è un observable
 		
 		SwingUtilities.invokeLater(()->{
 			new MyFrame(clickStream);
@@ -47,7 +47,7 @@ public class Test04a_swing_pubsub {
 			});
 
 		clickStream
-			.buffer(clickStream.throttleWithTimeout(250, TimeUnit.MILLISECONDS))
+			.buffer(clickStream.throttleWithTimeout(250, TimeUnit.MILLISECONDS)) // raggruppa n item ricavuti in tot millisecondi in un unico item
 			.map(xs -> xs.size())
 			.filter((v) -> v >= 2)
 			.subscribe((v) -> {
